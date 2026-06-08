@@ -2,13 +2,16 @@
 %define oname gallery_dl
 
 Name:		python-gallery-dl
-Version:	1.32.1
+Version:	1.32.2
 Release:	1
 Summary:	A program to download image galleries from several image hosting sites
 License:	GPL-2.0-or-later
 Group:		Development/Python
-URL:		https://github.com/mikf/gallery-dl
-Source0:	%{URL}/archive/v%{version}/%{name}-%{version}.tar.gz
+# old repo still exists but moved developement to different forge:
+# https://github.com/mikf/gallery-dl/issues/9374
+# https://github.com/mikf/gallery-dl
+URL:		https://codeberg.org/mikf/gallery-dl
+Source0:	https://codeberg.org/mikf/gallery-dl/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildSystem:	python
 BuildArch:	noarch
@@ -46,5 +49,5 @@ make man
 %{_datadir}/fish/vendor_completions.d/%{module}.fish
 %{_datadir}/zsh/site-functions/_%{module}
 %{_mandir}/man*/%{module}*
-%{py_sitedir}/%{oname}
-%{py_sitedir}/%{oname}-%{version}.dist-info
+%{python_sitelib}/%{oname}
+%{python_sitelib}/%{oname}-%{version}.dist-info
