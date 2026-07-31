@@ -2,7 +2,7 @@
 %define oname gallery_dl
 
 Name:		python-gallery-dl
-Version:	1.32.2
+Version:	1.32.8
 Release:	1
 Summary:	A program to download image galleries from several image hosting sites
 License:	GPL-2.0-or-later
